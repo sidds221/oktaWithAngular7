@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <span>Welcome to {{title}}!</span>
+</mat-toolbar>
+
+<style>
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
+
+<div *ngIf="!user" id="okta-login-container"></div>
+
+<div *ngIf="user">
+  Hello {{user}}
+
+  <!---<button (click)="logout()">Logout</button>-->
+</div>
+
+<!-- 
+<app-summary-list></app-summary-list>
+<app-security></app-security>
+<app-fund></app-fund> -->
+
+<nav>
+  <button routerLink= '/summary' >Summary </button>
+  <button routerLink='/fund' >Fund Summary</button>
+  <button routerLink='/security' >Security Summary</button>
+</nav>
+
+<router-outlet></router-outlet>
+<!--router views go here-->

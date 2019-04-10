@@ -1,0 +1,29 @@
+<p>Security Summary !</p>
+
+Enter Security: <input type="text" [(ngModel)]="security">
+
+<button (click)="onClick()"> button </button>
+
+
+{{security}}
+
+<br><br>
+
+<tr>
+       <td >totalNumberOfOrders:</td>
+       <td style="padding-left:5em">totalQuantity:</td>
+       <td style="padding-left:5em">totalPrice:</td>
+       <td style="padding-left:5em">avgPrice:</td>
+ 
+   </tr>
+ 
+   <tr>
+       <td style="padding-left:5em">{{saveSecurity.totalNumberOfOrders}}</td>
+       <td style="padding-left:5em">{{saveSecurity.totalQuantity}}</td>
+       <td style="padding-left:5em">{{saveSecurity.totalPrice}}</td>
+       <td style="padding-left:5em">{{saveSecurity.avgPrice}}</td>
+   </tr>
+ <br><br>
+   <tr *ngFor="let s of  saveSecurity.totalCombinableOrders">
+       {{s}}
+   </tr>

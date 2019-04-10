@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>summary List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+
+        <tr>
+            <td >totalNumberOfOrders:</td>
+            <td style="padding-left:5em">totalQuantity:</td>
+            <td style="padding-left:5em">totalPrice:</td>
+            <td style="padding-left:5em">avgPrice:</td>
+
+        </tr>
+
+        <tr>
+            <td style="padding-left:5em">{{summary.totalNumberOfOrders}}</td>
+            <td style="padding-left:5em">{{summary.totalQuantity}}</td>
+            <td style="padding-left:5em">{{summary.totalPrice}}</td>
+            <td style="padding-left:5em">{{summary.avgPrice}}</td>
+        </tr>
+<br><br>
+        <tr *ngFor="let s of summary.totalCombinableOrders">
+            {{s}}
+        </tr>
+
+    </mat-list>
+  </mat-card-content>
+</mat-card>

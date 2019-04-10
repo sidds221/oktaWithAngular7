@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>funds List</mat-card-title>
+  <mat-card-content>
+
+    Enter fund: <input type="text" [(ngModel)]="name">
+
+    <button (click)="onClick()">button</button>
+
+     <p>{{name}}</p>
+
+
+     <tr>
+      <td >totalNumberOfOrders:</td>
+      <td style="padding-left:5em">totalQuantity:</td>
+      <td style="padding-left:5em">totalPrice:</td>
+      <td style="padding-left:5em">avgPrice:</td>
+
+  </tr>
+
+  <tr>
+      <td style="padding-left:5em">{{funds.totalNumberOfOrders}}</td>
+      <td style="padding-left:5em">{{funds.totalQuantity}}</td>
+      <td style="padding-left:5em">{{funds.totalPrice}}</td>
+      <td style="padding-left:5em">{{funds.avgPrice}}</td>
+  </tr>
+<br><br>
+  <tr *ngFor="let s of  funds.totalCombinableOrders">
+      {{s}}
+  </tr>
+  </mat-card-content>
+</mat-card>
